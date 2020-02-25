@@ -1,2 +1,2 @@
 # MazeFx
-A maze solving application
+A maze solving application, implemented using javafx
