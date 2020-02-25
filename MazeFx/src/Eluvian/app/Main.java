@@ -4,6 +4,7 @@ package Eluvian.app;
  * @author Qiyang Zhong
  */
 import Eluvian.view.PaneController;
+import Eluvian.view.MenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
