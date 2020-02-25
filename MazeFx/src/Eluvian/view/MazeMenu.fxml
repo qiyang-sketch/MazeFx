@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<MenuBar VBox.vgrow="NEVER"  fx:controller="Eluvian.view.MenuController"
+         xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <menus>
+        <Menu mnemonicParsing="false" text="MazeFx" >
+            <items>
+                <MenuItem mnemonicParsing="false" fx:id="menuAbout" onAction="#about" text="About" />
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem mnemonicParsing="false" fx:id="menuSetting" onAction="#preference" text="Preferences…" />
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem mnemonicParsing="false" fx:id="menuTerminate" onAction="#terminate" text="Quit" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="File">
+            <items>
+                <MenuItem mnemonicParsing="false" fx:id="fileReport" text="Save Report" />
+                <MenuItem mnemonicParsing="false" fx:id="fileLog" text="Log" />
+            </items>
+        </Menu>
+    </menus>
+</MenuBar>
+
+
