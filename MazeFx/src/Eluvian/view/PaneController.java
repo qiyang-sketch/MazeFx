@@ -4,6 +4,7 @@ package Eluvian.view;
  * @author Qiyang Zhong
  */
 import Eluvian.algorithm.AStarSearch;
+import Eluvian.algorithm.DepthFirstSearch;
 import Eluvian.objects.Agent;
 import Eluvian.algorithm.BreadthFirstSearch;
 import Eluvian.objects.Cell;
@@ -112,6 +113,14 @@ public class PaneController {
 
     public void startDFS(ActionEvent event){
         Button checkButton = (Button)event.getSource();
+        if(checkButton == GetDFS){
+            DepthFirstSearch dfs = new DepthFirstSearch(grid, DIM);
+            if(!dfs.pathFound()){
+                System.out.println("no");
+                return;
+            }
+            trace(dfs.returnShortestPath());
+        }
     }
 
     public void startEuc(ActionEvent event){
@@ -141,7 +150,7 @@ public class PaneController {
     private void trace(Agent lastVisited) {
         if (lastVisited != null) {
             while (lastVisited.getParent() != null) {
-                grid[lastVisited.getX()][lastVisited.getY()].setFill(Color.BLUE);
+                grid[lastVisited.getX()][lastVisited.getY()].setFill(Color.ORANGERED);
                 lastVisited = lastVisited.getParent();
             }
         }
